@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "skeleflex.css",
+	"sources": [
+		"../skeleflex.sass",
+		"../sass/utilities/utilities.sass"
+	],
+	"mappings": "ACAA,AAAA,KAAK,CAAC;EACF,KAAK,EAAE,MAAO;CAAG",
+	"names": []
+}

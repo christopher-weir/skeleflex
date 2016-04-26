@@ -1,0 +1,38 @@
+{
+  "name": "@illuns/skeleflex",
+  "version": "1.0.0",
+  "description": "Skeleton Flex Css",
+  "main": "skeleflex.sass",
+  "scripts": {
+    "autoprefix": "postcss --use autoprefixer --output css/skeleflex.css css/skeleflex.css",
+    "autoprefix-min": "postcss --use autoprefixer --output css/skeleflex.min.css css/skeleflex.min.css",
+    "build": "npm run clean && npm run build-sass && npm run build-sass-min && npm run autoprefix && npm run autoprefix-min",
+    "build-sass": "node-sass --output-style expanded --source-map true --output css/ skeleflex.sass --outFile css/skeleflex.css",
+    "build-sass-min": "node-sass --output-style compressed --source-map true --output css/ skeleflex.sass css/skeleflex.min.css",
+    "clean": "rm -rf css",
+    "pre-push": "npm run build",
+    "start": "npm run build-sass -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://christopher-weir@github.com/christopher-weir/skeleflex.git"
+  },
+  "keywords": [
+    "skeleton",
+    "flexbox",
+    "css"
+  ],
+  "author": "Christopher Weir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christopher-weir/skeleflex/issues"
+  },
+  "homepage": "https://github.com/christopher-weir/skeleflex#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "captain-git-hook": "^1.1.1",
+    "normalize.css": "^4.1.1",
+    "postcss-cli": "^2.5.2",
+    "node-sass": "^3.6.0"
+  }
+}
